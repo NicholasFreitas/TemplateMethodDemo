@@ -8,6 +8,7 @@ namespace DemoTemplatePattern
 {
     class ConcreteClass : AbstractClass
     {
+
         public override void PrimitiveMethodOne()
         {
             Console.WriteLine("Primitive Method One");

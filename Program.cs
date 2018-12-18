@@ -19,11 +19,36 @@ namespace DemoTemplatePattern
          choose not to, there will be a default implementation.
              
              
-             
-             
-             
-             
-             
+
+            ------------------------------
+            | Abstract Class             |
+            ------------------------------
+            | TemplateMethod()|          | o---- PrimitiveMethodOne()
+            | PrimitiveMethodOne()       |       PrimitiveMethodTwo()
+            | PrimitiveMethodTwo()       |       PrimitiveMethodThreeHook() 
+            | PrimitiveMethodThreeHook() |       PrimitiveMethodFourHook()
+            | PrimitiveMethodFourHook()  |
+            ------------------------------
+                           |
+                           |
+                           |
+                         is-a
+                           ^
+                           ^
+                           |
+                           |
+            ------------------------------
+            |ConcreteClass               | 
+            ------------------------------
+            |PrimitiveMethodOne()        |
+            |PrimitiveMethodTwo()        |
+            |PrimitiveMethodThreeHook()  |
+            |PrimitiveMethodFourHook()   |
+            ------------------------------
+            * The first two would need implementations.
+            * The second two could be optionally overridden or not. The have default implementations
+
+
              */
 
 
